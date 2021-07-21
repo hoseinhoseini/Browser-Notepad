@@ -1,37 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
 @font-face {
     font-family: yekan-bakh;
-    src: url('Yekan_Bakh_Regular.ttf');
-    src: url('Yekan_Bakh_Regular.eot');
-    src: url('Yekan_Bakh_Regular.woff');
-    src: url('Yekan_Bakh_Regular.woff2');
+    src: url('Fonts/Yekan_Bakh_Regular.ttf');
+    src: url('Fonts/Yekan_Bakh_Regular.eot');
+    src: url('Fonts/Yekan_Bakh_Regular.woff');
+    src: url('Fonts/Yekan_Bakh_Regular.woff2');
     font-weight: normal;
 }
 
 @font-face {
-    font-family: yekan-bakh;
-    src: url('Yekan_Bakh_Bold.ttf');
-    src: url('Yekan_Bakh_Bold.eot');
-    src: url('Yekan_Bakh_Bold.woff');
-    src: url('Yekan_Bakh_Bold.woff2');
+    font-family: Yekan-bakh;
+    src: url('Fonts/Yekan_Bakh_Bold.ttf');
+    src: url('Fonts/Yekan_Bakh_Bold.eot');
+    src: url('Fonts/Yekan_Bakh_Bold.woff');
+    src: url('Fonts/Yekan_Bakh_Bold.woff2');
     font-weight: bold;
 }
 
 @font-face {
     font-family: iransans-fanum;
-    src: url('IRANSans_fanum.ttf');
-    src: url('IRANSans_fanum.eot');
-    src: url('IRANSans_fanum.woff');
-    src: url('IRANSans_fanum.woff2');
+    src: url('Fonts/IRANSans_fanum.ttf');
+    src: url('Fonts/IRANSans_fanum.eot');
+    src: url('Fonts/IRANSans_fanum.woff');
+    src: url('Fonts/IRANSans_fanum.woff2');
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    direction: rtl;
 }
 
 #header {
     width: 100%;
     height: 700px;
-    background-color: red;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 25px;
+    align-self: flex-start;
+}
+
+.logo span {
+    font-size: 40px;
+}
+
+.navigation {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navigation ul {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 50px;
+}
+
+.navigation ul li a {
+    color: black;
+    text-decoration: none;
+    font-family: Yekan-bakh !important;
+    font-weight: bold;
 }
