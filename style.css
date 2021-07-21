@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
-
 @font-face {
     font-family: yekan-bakh;
     src: url('Fonts/Yekan_Bakh_Regular.ttf');
@@ -8,7 +7,6 @@
     src: url('Fonts/Yekan_Bakh_Regular.woff2');
     font-weight: normal;
 }
-
 @font-face {
     font-family: Yekan-bakh;
     src: url('Fonts/Yekan_Bakh_Bold.ttf');
@@ -17,7 +15,6 @@
     src: url('Fonts/Yekan_Bakh_Bold.woff2');
     font-weight: bold;
 }
-
 @font-face {
     font-family: iransans-fanum;
     src: url('Fonts/IRANSans_fanum.ttf');
@@ -26,11 +23,12 @@
     src: url('Fonts/IRANSans_fanum.woff2');
 }
 
+/* ----- Global Style ----- */
+
 :root {
     --mainBlue: #341F97;
     --maniWhite: #fff;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -38,12 +36,17 @@
     direction: rtl;
 }
 
+/* ----- Header Style ----- */
+
 #header {
     width: 100%;
     height: 700px;
     padding: 10px 20px;
     background-color: var(--mainBlue);
+    border-radius: 0 0 0 20%;
 }
+
+/* ----- Logo Style ----- */
 
 .logo {
     font-family: 'Poppins';
@@ -53,10 +56,11 @@
     color: var(--maniWhite);
     cursor: pointer;
 }
-
 .logo span {
     font-size: 40px;
 }
+
+/* ----- Navigation Style ----- */
 
 .navigation {
     width: 100%;
@@ -65,7 +69,6 @@
     align-items: center;
     justify-content: flex-start;
 }
-
 .navigation ul {
     width: 400px;
     display: flex;
@@ -74,24 +77,23 @@
     list-style: none;
     margin-right: 50px;
 }
-
 .navigation ul li {
     padding: 7px;
     transition: all 0.2s ease-in;
 }
-
 .navigation ul li a {
     color: var(--maniWhite);
     text-decoration: none;
     font-family: Yekan-bakh !important;
     font-weight: bold;
 }
-
 .navigation ul li:hover {
     border: 2px solid var(--maniWhite);
     border-radius: 5px;
     transition: all 0.2s ease-in;
 }
+
+/* ----- Mani Title Style ----- */
 
 .main-title-parent {
     width: 100%;
@@ -101,7 +103,6 @@
     justify-content: space-between;
     margin-top: 100px;
 }
-
 .main-title-content {
     width: 40%;
     height: 100%;
@@ -110,14 +111,12 @@
     justify-content: space-between;
     order: 1;
 }
-
 .main-title-content h1 {
     font-family: Yekan-bakh;
     color: var(--maniWhite);
     font-weight: bold;
     font-size: 50px;
 }
-
 .main-title-image {
     width: 40%;
     height: 100%;
@@ -125,6 +124,14 @@
     flex-direction: column;
     order: 2;
 }
+.main-title-image img {
+    width: 400px;
+    border-radius: 20px;
+    transform: rotate(10deg);
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ----- Add New Note Btn Style ----- */
 
 .add-new-note {
     width: 300px;
@@ -139,10 +146,100 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-
 .add-new-note:hover {
     background-color: var(--mainBlue);
     border: 2px solid var(--maniWhite);
     color: var(--maniWhite);
     transition: all 0.2s ease-in-out;
+}
+
+/* ----- Notepad Section Style ----- */
+
+#main-section {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: space-around;
+}
+#add-note {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#add-note h2 {
+    width: fit-content;
+    font-family: Yekan-bakh;
+    font-size: 40px;
+    transition: all 0.2s ease-in-out;
+}
+#add-note h2:hover {
+    color: var(--mainBlue);
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--mainBlue);
+    border-radius: 8px;
+    padding: 5px;
+}
+#add-note form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#add-note label {
+    width: 100%;
+    padding: 0 15%;
+    font-family: Yekan-bakh;
+    margin: 50px 0 -20px 0;
+}
+textarea {
+    width: 70%;
+    border-radius: 8px;
+    border-color: var(--mainBlue);
+}
+#add-note form input[type="submit"] {
+    width: 70%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--mainBlue);
+    color: var(--maniWhite);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: Yekan-bakh;
+    font-weight: bold;
+}
+#add-note form input[type="submit"]:hover {
+    background-color: var(--maniWhite);
+    border: 2px solid var(--mainBlue);
+    color: var(--mainBlue);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ----- View Note Section Style ----- */
+
+#view-note {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#view-note h2 {
+    width: fit-content;
+    font-family: Yekan-bakh;
+    font-size: 40px;
+    transition: all 0.2s ease-in-out;
+}
+#view-note h2:hover {
+    color: var(--mainBlue);
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--mainBlue);
+    border-radius: 8px;
+    padding: 5px;
+}
+.note-list {
+    width: 100%;
+    height: 300px;
 }
