@@ -28,6 +28,9 @@
 :root {
     --mainBlue: #341F97;
     --maniWhite: #fff;
+    --mainGreen: #018673;
+    --greenBlack: #2a454e;
+    --lightGreen: #00dfbd;
 }
 * {
     margin: 0;
@@ -42,7 +45,7 @@
     width: 100%;
     height: 700px;
     padding: 10px 20px;
-    background-color: var(--mainBlue);
+    background-color: var(--mainGreen);
     border-radius: 0 0 0 20%;
 }
 
@@ -140,15 +143,15 @@
     border: none;
     border-radius: 8px;
     background-color: var(--maniWhite);
-    color: var(--mainBlue);
+    color: var(--greenBlack);
     font-family: Yekan-bakh;
     font-size: 18px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 .add-new-note:hover {
-    background-color: var(--mainBlue);
-    border: 2px solid var(--maniWhite);
+    background-color: var(--greenBlack);
+    border: 2px solid var(--greenBlack);
     color: var(--maniWhite);
     transition: all 0.2s ease-in-out;
 }
@@ -171,14 +174,8 @@
     width: fit-content;
     font-family: Yekan-bakh;
     font-size: 40px;
+    color: var(--greenBlack);
     transition: all 0.2s ease-in-out;
-}
-#add-note h2:hover {
-    color: var(--mainBlue);
-    transition: all 0.2s ease-in-out;
-    border: 2px solid var(--mainBlue);
-    border-radius: 8px;
-    padding: 5px;
 }
 #add-note form {
     width: 100%;
@@ -196,7 +193,7 @@
 textarea {
     width: 70%;
     border-radius: 8px;
-    border-color: var(--mainBlue);
+    border-color: var(--greenBlack);
 }
 #add-note form input[type="submit"] {
     width: 70%;
@@ -204,7 +201,7 @@ textarea {
     margin-top: 10px;
     border-radius: 8px;
     border: none;
-    background-color: var(--mainBlue);
+    background-color: var(--greenBlack);
     color: var(--maniWhite);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -213,8 +210,8 @@ textarea {
 }
 #add-note form input[type="submit"]:hover {
     background-color: var(--maniWhite);
-    border: 2px solid var(--mainBlue);
-    color: var(--mainBlue);
+    border: 2px solid var(--greenBlack);
+    color: var(--greenBlack);
     transition: all 0.2s ease-in-out;
 }
 
@@ -229,15 +226,9 @@ textarea {
 #view-note h2 {
     width: fit-content;
     font-family: Yekan-bakh;
+    color: var(--greenBlack);
     font-size: 40px;
     transition: all 0.2s ease-in-out;
-}
-#view-note h2:hover {
-    color: var(--mainBlue);
-    transition: all 0.2s ease-in-out;
-    border: 2px solid var(--mainBlue);
-    border-radius: 8px;
-    padding: 5px;
 }
 .note-list {
     width: 100%;
@@ -249,41 +240,87 @@ textarea {
 #dev-info {
     width: 75%;
     margin: 0 auto 100px auto;
-    height: 300px;
     padding: 20px 50px;
     border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background-color: var(--maniWhite);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
 }
 #dev-info h2 {
-    width: fit-content;
+    width: 100%;
     font-family: Yekan-bakh;
     font-size: 40px;
     transition: all 0.2s ease-in-out;
+    color: var(--greenBlack);
     margin-bottom: 30px;
 }
 .information {
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "Name-Title Name-Value"
+    "Job-Title Job-Value"
+    "Desc-Title Desc-Title"
+    "Desc-Value Desc-Value"
+    "Project-btn Project-btn";
+}
+#name-title {
+    grid-area: Name-Title;
+}
+#name-value {
+    grid-area: Name-Value;
+}
+#job-title {
+    grid-area: Job-Title;
+}
+#job-value {
+    grid-area: Job-Value;
+}
+#desc-title {
+    grid-area: Desc-Title;
+}
+#desc-value {
+    grid-area: Desc-Value;
+    font-size: 16px;
 }
 .information .info-title,
 .information .info-value {
     font-family: Yekan-bakh;
-    color: red;
+    color: var(--mainGreen);
     font-weight: bold;
     font-size: 20px;
 }
 .information .info-value {
     color: var(--mainBlue);
 }
-.git-info button {
-    width: 150px;
-    height: 35px;
-    margin-top: 30px;
+#project-btn {
+    width: 200px;
+    height: 40px;
+    margin-top: 70px;
     font-family: Yekan-bakh;
+    font-weight: bold;
     color: var(--maniWhite);
-    background-color: var(--mainBlue);
+    background-color: var(--greenBlack);
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    grid-area: Project-btn;
+    transition: all 0.2s ease-in-out;
+}
+#project-btn:hover {
+    background-color: var(--maniWhite);
+    color: var(--greenBlack);
+    border: 2px solid var(--greenBlack);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ----- Information Image Section Style ----- */
+
+.information-image img {
+    width: 400px;
 }
