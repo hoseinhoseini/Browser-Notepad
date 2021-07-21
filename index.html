@@ -27,7 +27,9 @@
 
         <!-- Main Title Section Start -->
         <div class="main-title-parent">
-            <div class="main-title-image"></div>
+            <div class="main-title-image">
+                <img src="Image/2145.jpg" alt="">
+            </div>
             <div class="main-title-content">
                 <h1>
                     پروژه دفترچه یادداشت مرورگر
@@ -45,5 +47,29 @@
         <!-- Main Title Section End -->
     </header>
     <!-- Header Elements End -->
+
+    <!-- Main Section Start -->
+    <article id="main-section">
+
+        <!-- Add Note Section Start -->
+        <figure id="add-note">
+            <h2>اضافه کردن یادداشت جدید</h2>
+            <label for="">یادداشت جدید بنویس : </label>
+            <form action="#">
+                <label for="note"></label>
+                <textarea name="note-box" id="note-box" cols="30" rows="10"></textarea>
+                <input type="submit" value="افزودن یادداشت">
+            </form>
+        </figure>
+        <!-- Add Note Section End -->
+
+        <!-- View Note Section Start -->
+        <figure id="view-note">
+            <h2>یادداشت های من</h2>
+            <div class="note-list"></div>
+        </figure>
+        <!-- View Note Section Start -->
+    </article>
+    <!-- Main Section End -->
 </body>
 </html>
