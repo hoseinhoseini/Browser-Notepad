@@ -243,3 +243,47 @@ textarea {
     width: 100%;
     height: 300px;
 }
+
+/* ----- Developer Information Section Style ----- */
+
+#dev-info {
+    width: 75%;
+    margin: 0 auto 100px auto;
+    height: 300px;
+    padding: 20px 50px;
+    border-radius: 8px;
+    background-color: var(--maniWhite);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+}
+#dev-info h2 {
+    width: fit-content;
+    font-family: Yekan-bakh;
+    font-size: 40px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 30px;
+}
+.information {
+    width: 100%;
+    height: 100%;
+}
+.information .info-title,
+.information .info-value {
+    font-family: Yekan-bakh;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.information .info-value {
+    color: var(--mainBlue);
+}
+.git-info button {
+    width: 150px;
+    height: 35px;
+    margin-top: 30px;
+    font-family: Yekan-bakh;
+    color: var(--maniWhite);
+    background-color: var(--mainBlue);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
