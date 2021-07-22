@@ -246,8 +246,6 @@ textarea {
 .note-list li {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     font-size: 20px;
     font-weight: bold;
 }
@@ -256,6 +254,7 @@ textarea {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    float: left;
 }
 /* ----- Developer Information Section Style ----- */
 
